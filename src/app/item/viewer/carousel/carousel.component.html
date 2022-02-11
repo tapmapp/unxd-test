@@ -1,0 +1,11 @@
+<swiper [config]="config" #swiper>
+  <div class="swiper-wrapper">
+    <div
+      class="swiper-slide"
+      *ngFor="let thumbnail of thumbnails"
+      (click)="setPreviewImg(thumbnail.url)"
+    >
+      <img [src]="thumbnail.url" [alt]="thumbnail.description" />
+    </div>
+  </div>
+</swiper>

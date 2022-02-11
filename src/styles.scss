@@ -1,0 +1,24 @@
+@import "~ng-zorro-antd/style/index.min.css";
+
+@font-face {
+  font-family: "Lab Grotesque";
+  src: url("./assets/fonts/LabGrotesque-Light.ttf") format("truetype");
+}
+
+body {
+  margin: 0px;
+  font-family: "Lab Grotesque";
+}
+ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.ant-modal-close-x {
+  font-size: 12px;
+}
+
+.ant-modal-centered .ant-modal {
+  width: 425px !important;
+}

@@ -1,0 +1,115 @@
+:host {
+  padding: 40px;
+  border: 1px solid #e6e6e6;
+  box-sizing: border-box;
+  border-radius: 2px;
+  margin: 30px 0px 40px 100px;
+  .current-bid-information-container {
+    display: flex;
+    flex-direction: row;
+    .current-bid-info-content {
+      display: flex;
+      flex-direction: column;
+      width: 30%;
+      justify-content: center;
+      margin: 0px 0px 30px 0px;
+      h5 {
+        margin: 0px 0px 10px 0px;
+        font-size: 14px;
+        color: #6a6a6a;
+      }
+      .value {
+        margin: 0px 0px 10px 0px;
+        font-size: 24px;
+        font-weight: bold;
+      }
+      .value-dollars {
+        font-size: 14px;
+        color: #6a6a6a;
+      }
+    }
+    .current-bid-countdown-content {
+      width: 70%;
+    }
+  }
+  button {
+    background: #232323;
+    border-radius: 2px;
+    height: 50px;
+    width: 100%;
+    border: 0px;
+    color: white;
+    display: flex;
+    font-size: 14px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    img {
+      margin: 0px 10px 0px 0px;
+    }
+  }
+}
+.modal-container {
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  .connect-metamask {
+    border: 1px solid #e6e6e6;
+    background: #fff;
+    border-radius: 2px;
+    height: 50px;
+    width: 100%;
+    color: #000;
+    display: flex;
+    font-size: 14px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin: 0px 0px 10px 0px;
+    font-weight: bold;
+    &.disabled {
+      pointer-events: none;
+      opacity: 0.65;
+      background-color: #e6e6e6;
+    }
+    .metamask-icon {
+      width: 30px;
+      margin: 0px 10px 0px 0px;
+    }
+  }
+  .get-metamask {
+    border: 1px solid #e6e6e6;
+    background: #fff;
+    border-radius: 2px;
+    height: 50px;
+    width: 100%;
+    color: #000;
+    display: flex;
+    font-size: 14px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-weight: bold;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  :host {
+    .current-bid-information-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .current-bid-info-content {
+        width: 100%;
+        h5,
+        .value,
+        .value-dollars {
+          text-align: center;
+        }
+      }
+      .current-bid-countdown-content {
+        width: 100%;
+      }
+    }
+  }
+}

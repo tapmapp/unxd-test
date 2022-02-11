@@ -1,0 +1,38 @@
+<div *ngIf="currentBid">
+  <div class="current-bid-information-container">
+    <div class="current-bid-info-content">
+      <h5 class="header">Current Bid</h5>
+      <span class="value">{{ currentBid.amount }} ETH</span>
+      <span class="value-dollars">${{ currentBid.amountDollars }}</span>
+    </div>
+    <div class="current-bid-countdown-content">
+      <app-countdown [timestamp]="currentBid.timestamp"></app-countdown>
+    </div>
+  </div>
+  <button (click)="showModal()">
+    <img
+      src="../../../assets/img/place-bid-icon.svg"
+      alt="Place bid icon"
+    />Place Bid
+  </button>
+</div>
+<nz-modal
+  [(nzVisible)]="isVisible"
+  nzTitle=""
+  [nzFooter]="null"
+  [nzCentered]="true"
+  (nzOnCancel)="handleCancel()"
+  (nzOnOk)="handleOk()"
+>
+  <div class="modal-container">
+    <button
+      class="connect-metamask"
+      [ngClass]="{ disabled: !window.ethereum }"
+      (click)="connectMetamask()"
+    >
+      <img class="metamask-icon" src="./assets/img/metamask.png" />Connect
+      Metamask
+    </button>
+    <button class="get-metamask" (click)="getMetamask()">Get Metamask</button>
+  </div>
+</nz-modal>

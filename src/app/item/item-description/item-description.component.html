@@ -1,0 +1,95 @@
+<section class="item-content-container">
+  <div class="state-actions">
+    <span class="status live">Now live</span>
+    <img src="./assets/img/favorites-icon.svg" class="arrow-icon" />
+    <img src="./assets/img/share-icon.svg" class="arrow-icon" />
+    <img src="./assets/img/more-icon.svg" class="arrow-icon" />
+  </div>
+  <h2 class="collezione">{{ collection }}</h2>
+  <h1 class="title">{{ title }}</h1>
+  <h5 class="edition">{{ edition }}</h5>
+  <div class="features">
+    <div class="feature" *ngFor="let feature of features">
+      <img [src]="feature.icon" />
+      {{ feature.description }}
+    </div>
+  </div>
+  <div class="involved-container">
+    <div class="created-by-container">
+      <h5>Created By</h5>
+      <div class="created-by-content">
+        <div class="user-thumbs">
+          <img
+            class="user-thumb"
+            *ngFor="let creator of createdBy"
+            [src]="creator.userThumb"
+          />
+        </div>
+        <div
+          class="tags"
+          [ngStyle]="{ right: createdBy.length > 1 ? '15px' : '0px' }"
+        >
+          <span
+            class="creator-tag"
+            *ngFor="let creator of createdBy; let i = index"
+            >{{ creator.tag }}
+            {{ createdBy.length !== i + 1 ? "+&nbsp;" : "" }}
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="owned-by-container">
+      <h5>Owned By</h5>
+      <div class="owned-by-content">
+        <div class="user-thumbs">
+          <img
+            class="user-thumb"
+            *ngFor="let owned of ownedBy"
+            [src]="owned.userThumb"
+          />
+        </div>
+        <div
+          class="tags"
+          [ngStyle]="{ right: ownedBy.length > 1 ? '15px' : '0px' }"
+        >
+          <span
+            class="creator-tag"
+            *ngFor="let owned of ownedBy; let i = index"
+          >
+            {{ owned.tag }}
+            {{ ownedBy.length !== i + 1 ? "+&nbsp;" : "" }}</span
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+  <p class="content" *ngFor="let contentItem of content">
+    {{ contentItem }}
+  </p>
+  <div class="expandables-container">
+    <div class="expandable-container">
+      <img src="./assets/img/digital-icon.svg" class="expandable-icon" />Digital
+      <img src="./assets/img/arrow.svg" class="arrow-icon" />
+    </div>
+    <div class="expandable-container">
+      <img
+        src="./assets/img/physical-icon.svg"
+        class="expandable-icon"
+      />Physical
+      <img src="./assets/img/arrow.svg" class="arrow-icon" />
+    </div>
+    <div class="expandable-container">
+      <img
+        src="./assets/img/experiential-icon.svg"
+        class="expandable-icon"
+      />Experiential
+      <img src="./assets/img/arrow.svg" class="arrow-icon" />
+    </div>
+    <div class="expandable-container">
+      <img
+        src="./assets/img/details-icon.svg"
+        class="expandable-icon"
+      />Details<img src="./assets/img/arrow.svg" class="arrow-icon" />
+    </div>
+  </div>
+</section>

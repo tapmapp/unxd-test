@@ -1,0 +1,25 @@
+<div class="item-container" *ngIf="item">
+  <app-viewer
+    class="viewer-container"
+    [preview]="item.preview"
+    [thumbnails]="item.thumbnails"
+  ></app-viewer>
+
+  <app-item-description
+    class="item-content-container"
+    [collection]="item.collection"
+    [title]="item.title"
+    [edition]="item.edition"
+    [features]="item.features"
+    [createdBy]="item.createdBy"
+    [ownedBy]="item.ownedBy"
+    [content]="item.content"
+  ></app-item-description>
+
+  <app-current-bid
+    class="current-bid-container"
+    [itemId]="item.id"
+  ></app-current-bid>
+  <app-activity class="activity-container" [itemId]="item.id"></app-activity>
+  <app-story class="story"></app-story>
+</div>

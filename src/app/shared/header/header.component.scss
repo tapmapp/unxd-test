@@ -1,0 +1,89 @@
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  padding: 0px 70px;
+  border-bottom: 1px solid #e6e6e6;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: white;
+  z-index: 10;
+  .unxd-logo {
+    width: 80px;
+    cursor: pointer;
+  }
+  .header-menu {
+    margin: 0px;
+    li {
+      float: left;
+      font-size: 14px;
+      font-weight: 400;
+      margin: 0px 0px 0px 30px;
+      display: flex;
+      align-items: center;
+      height: 60px;
+      cursor: pointer;
+    }
+  }
+  .header-actions {
+    margin: 0px;
+    li {
+      float: left;
+      margin: 0px 0px 0px 30px;
+      display: flex;
+      align-items: center;
+      height: 60px;
+      cursor: pointer;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .header-container {
+    padding: 0px 30px;
+    .header-menu {
+      display: none;
+    }
+    .header-actions {
+      .wallet {
+        display: none;
+      }
+      .user {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (min-width: 601px) and (max-width: 760px) {
+  .header-container {
+    padding: 0px 65px;
+    .header-menu {
+      display: none;
+    }
+    .header-actions {
+      .wallet {
+        display: none;
+      }
+      .user {
+        display: none;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 761px) {
+  .header-container {
+    padding: 0px 65px;
+    .header-actions {
+      .burguer {
+        display: none;
+      }
+      .search {
+        display: none;
+      }
+    }
+  }
+}
