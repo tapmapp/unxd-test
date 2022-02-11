@@ -62,6 +62,25 @@ export class ItemService {
           tag: '@JuliaDallas',
         },
       ],
+      stories: [
+        {
+          title: 'About the artists',
+          content: [
+            'Each shoe is represented by a 3D NFT of the shoe design, created by the MNTD studio. The MNTD platform is loaded with all of the shoes put up for auction along with a schedule of the individual auction dates. To increase attention and manage such a large auction, shoes are auctioned off by artist (5 shoes per day) over 10 days. After the auctions, NFTs are distributed to the winners. They can choose to redeem the NFT for the physical shoe, trade it on the secondary market, or hold onto the NFT forever. To simplify the logistics, all tokens must be redeemed within one year of the auction. Each owner redeeming a token will get an alternative NFT corresponding to a redeemed token. For example, the colors could be inverted or grayscale. It should be an interesting work of art in its own right, giving it the ability to command a value even after redemption.',
+          ],
+          img: {
+            url: 'http://localhost:4200/assets/img/history.jpg',
+            desc: ' Natively Digital is a collection of remarkable, unique artworks.',
+            tag: '@Dolce&Gabbanna',
+          },
+        },
+        {
+          title: 'The world’s largest NFT auction',
+          content: [
+            'Natively Digital is a collection of remarkable, unique artworks co-curated with Robert Alice. We showcase some of the earliest, raw NFTs built on pre-Ethereum chains alongside newer, complex NFTs that showcase the cutting edge technical innovation. From across four continents, we have sourced emerging crypto artists and the ‘old masters’ alike to exhibit their works. The multi-venue global exhibition is presented in partnership with @Samsung, featuring their lineup of innovative TVs and Projectors to showcase various NFT artworks. The landmark auction will provide an opportunity for collectors, curators, and enthusiasts to focus on the emerging ideas and aesthetics contained within these works. The Natively Digital auction will occur between June 3 and June 10 online at sothebys.com. Discover more about the sale below.',
+          ],
+        },
+      ],
       state: 'live',
     });
   }

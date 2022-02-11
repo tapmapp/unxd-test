@@ -1,6 +1,6 @@
 # Unxd
 
-npm install
+npm install,
 npm start
 
 should be fine!

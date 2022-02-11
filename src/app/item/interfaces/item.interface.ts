@@ -18,6 +18,18 @@ export interface OwnedBy {
   tag: string;
 }
 
+export interface StoryImg {
+  url: string;
+  desc: string;
+  tag: string;
+}
+
+export interface Story {
+  title: string;
+  content: string[];
+  img?: StoryImg;
+}
+
 export interface Item {
   id: string;
   collection: string;
@@ -30,4 +42,5 @@ export interface Item {
   state: string;
   thumbnails: Thumbnail[];
   title: string;
+  stories: Story[];
 }
